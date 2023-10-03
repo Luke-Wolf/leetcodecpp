@@ -33,6 +33,7 @@ public:
      *  You may assume the two numbers do not contain any leading zero, except the number 0 itself.
      */
     static auto addTwoNumbers(const ListNode *list_1, const ListNode *list_2) -> const ListNode *;
+
 };
 
 

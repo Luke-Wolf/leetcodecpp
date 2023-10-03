@@ -4,10 +4,12 @@ include(Catch)
 
 if (BUILD_TESTING)
     set(ALL_TESTS
+            all_tests
             two_sum_tests
             add_two_numbers_tests
-            all_tests)
-    add_executable(all_tests two_sum_tests.cpp add_two_numbers_tests.cpp)
+    )
+    file(GLOB tests_SRC CONFIGURE_DEPENDS "*.cpp")
+    add_executable(all_tests ${tests_SRC})
     add_executable(two_sum_tests two_sum_tests.cpp)
     add_executable(add_two_numbers_tests add_two_numbers_tests.cpp)
 
